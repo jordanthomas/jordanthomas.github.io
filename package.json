@@ -1,0 +1,25 @@
+{
+  "name": "jordanthomas.github.io",
+  "version": "0.0.0",
+  "description": "A website.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jordanthomas/jordanthomas.github.io.git"
+  },
+  "author": "Jordan Thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jordanthomas/jordanthomas.github.io/issues"
+  },
+  "homepage": "https://github.com/jordanthomas/jordanthomas.github.io",
+  "devDependencies": {
+    "gulp-watch": "~0.5.2",
+    "gulp-uglify": "~0.2.1",
+    "gulp-concat": "~2.1.7",
+    "gulp": "~3.5.5"
+  }
+}
