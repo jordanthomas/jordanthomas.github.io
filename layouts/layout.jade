@@ -1,0 +1,19 @@
+block vars
+doctype html
+html(lang="en")
+  head
+    title #{pageTitle}
+    link(href='css/main.css', rel='stylesheet')
+
+  body
+    h1 Jordan Thomas
+
+    nav
+      ul
+        li: a(href='http://twitter.com/jordan_thomas') Twitter
+        li: a(href='http://jordanthomas.tumblr.com') Tumblr
+        li: a(href='https://github.com/jordanthomas') Github
+
+    block main
+
+    script(src='js/all.min.js')

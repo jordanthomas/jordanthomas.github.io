@@ -1,0 +1,47 @@
+$font-color: #222;
+
+@import 'vendor/normalize';
+
+body {
+  color: $font-color;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 6em;
+  font-weight: 100;
+  margin: 0;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+li {
+  display: inline;
+  padding: 0 1em;
+}
+
+a {
+  color: $font-color;
+  font-size: 2.25em;
+  font-weight: 100;
+  text-decoration: none;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
