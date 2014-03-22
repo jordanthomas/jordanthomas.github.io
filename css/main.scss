@@ -1,5 +1,32 @@
 // Put all your variables and imports in this file.
 $font-color: #222;
+$font-family: 'Helvetica Neue', Helvetica, sans-serif;
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin flexbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin flexbox-align-items($value) {
+  -webkit-align-items: $value;
+  -moz-align-items: $value;
+  align-items: $value;
+}
 
 @import 'vendor/normalize';
 @import 'base';

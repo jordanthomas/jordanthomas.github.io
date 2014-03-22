@@ -2,18 +2,28 @@ block vars
 doctype html
 html(lang="en")
   head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
     title #{pageTitle}
+    meta(name='description', content='Jordan Thomas is a developer from Cincnnati, Ohio.')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     link(href='css/main.css', rel='stylesheet')
 
   body
-    h1 Jordan Thomas
+    div.container
+      h1 Jordan Thomas
 
-    nav
-      ul
-        li: a(href='http://twitter.com/jordan_thomas') Twitter
-        li: a(href='http://jordanthomas.tumblr.com') Tumblr
-        li: a(href='https://github.com/jordanthomas') Github
+      nav
+        ul
+          li: a(href='http://twitter.com/jordan_thomas') Twitter
+          li: a(href='http://jordanthomas.tumblr.com') Tumblr
+          li: a(href='https://github.com/jordanthomas') Github
 
-    block main
+      block main
 
     script(src='js/all.min.js')
+    script.
+      var _gaq=[['_setAccount','UA-29644797-1'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
