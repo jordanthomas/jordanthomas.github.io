@@ -22,6 +22,7 @@
     "gulp-concat": "~2.1.7",
     "gulp": "~3.5.5",
     "gulp-jade": "~0.4.2",
-    "gulp-sass": "~0.7.1"
+    "gulp-sass": "~0.7.1",
+    "ecstatic": "~0.4.13"
   }
 }
