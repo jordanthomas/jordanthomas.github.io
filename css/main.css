@@ -317,6 +317,23 @@ table {
 td, th {
   padding: 0; }
 
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center; }
+
 body {
   color: #222;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
@@ -324,23 +341,27 @@ body {
   font-weight: 100;
   line-height: 1.4; }
 
+.container {
+  margin: 0 auto; }
+
 h1 {
-  font-size: 6em;
+  font-size: 5em;
   font-weight: 100;
-  margin: 0;
-  text-align: center; }
+  margin: 0 0 0.5em;
+  text-align: center;
+  line-height: 1; }
 
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  position: absolute;
   text-align: center;
   width: 100%; }
 
-li {
-  display: inline;
-  padding: 0 1em; }
+@media screen and (min-width: 33em) {
+  li {
+    display: inline-block;
+    margin: 0 1em; } }
 
 a {
   color: #222;
