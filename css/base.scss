@@ -47,11 +47,16 @@ li {
   }
 }
 
-a {
+a,
+a:link{
   color: $font-color;
   font-size: 2.25em;
   font-weight: 100;
   text-decoration: none;
+
+  &:hover {
+    color: lighten($font-color, 50%);
+  }
 }
 
 canvas {
