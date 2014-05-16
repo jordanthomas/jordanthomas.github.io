@@ -18,7 +18,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('scss', function () {
-  return gulp.src('css/main.scss')
+  return gulp.src('./source/css/main.scss')
     .pipe(sass({errLogToConsole: true}))
     .pipe(gulp.dest('build/css'));
 });
