@@ -5,14 +5,14 @@ var browserify = require('gulp-browserify');
 var jade = require('gulp-jade');
 var sass = require('gulp-sass');
 var paths = {
-      scripts: ['./source/js/main.js'],
+      scripts: ['./source/js/**/*.js'],
       pages: ['./source/**/*.jade', '!./source/layouts/**'],
       layouts: ['./source/layouts/**/*.jade'],
       scss: ['./source/css/**/*.scss', '!./source/css/vendor/**/*.scss'],
     };
 
 gulp.task('scripts', function() {
-  return gulp.src(paths.scripts)
+  return gulp.src('./source/js/main.js')
     .pipe(browserify())
     .pipe(gulp.dest('build/js'));
 });
