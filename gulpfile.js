@@ -1,21 +1,19 @@
-var gulp     = require('gulp'),
-    http     = require('http'),
-    ecstatic = require('ecstatic'),
-    concat   = require('gulp-concat'),
-    uglify   = require('gulp-uglify'),
-    jade     = require('gulp-jade'),
-    sass     = require('gulp-sass'),
-    paths = {
-      scripts: ['js/**/*.js', '!js/vendor/**/*.js'],
-      pages: ['**/*.jade', '!layouts/**', '!node_modules/**'],
-      layouts: ['layouts/**/*.jade'],
-      scss: ['css/**/*.scss', '!css/vendor/**/*.scss'],
+var gulp = require('gulp');
+var http = require('http');
+var ecstatic = require('ecstatic');
+var browserify = require('gulp-browserify');
+var jade = require('gulp-jade');
+var sass = require('gulp-sass');
+var paths = {
+      scripts: ['./source/js/main.js'],
+      pages: ['./source/**/*.jade', '!./source/layouts/**'],
+      layouts: ['./source/layouts/**/*.jade'],
+      scss: ['./source/css/**/*.scss', '!./source/css/vendor/**/*.scss'],
     };
 
 gulp.task('scripts', function() {
   return gulp.src(paths.scripts)
-    .pipe(uglify())
-    .pipe(concat('all.min.js'))
+    .pipe(browserify())
     .pipe(gulp.dest('build/js'));
 });
 
@@ -35,8 +33,6 @@ gulp.task('server', function() {
   http.createServer(
     ecstatic({ root: __dirname + '/build' })
   ).listen(8080);
-
-  console.log('Server listening on 8080...');
 });
 
 gulp.task('watch', function() {
