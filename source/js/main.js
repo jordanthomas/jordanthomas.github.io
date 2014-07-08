@@ -17,7 +17,7 @@
                                  window.msRequestAnimationFrame;
 
   var pf = new ParticleField({
-    count: 100,
+    count: 35,
     canvas: document.getElementById('canvas')
   });
 

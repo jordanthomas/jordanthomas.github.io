@@ -2,11 +2,10 @@
   function Particle(options) {
     this.position = options.position;
     this.field = options.field;
-    this.radius = Math.round(utils.randomBetween(40, 45));
-    this.velocity = 10;
-    this.xDir = utils.randomBetween(0.333, 1) * utils.randomSign();
-    this.yDir = utils.randomBetween(0.333, 1) * utils.randomSign();
-    this.color = "rgba(" + (Math.floor(Math.random() * 255)) + ", " + (Math.floor(Math.random() * 255)) + ", " + (Math.floor(Math.random() * 255)) + ", 0.5)"
+    this.radius = Math.round(utils.randomBetween(15, 30));
+    this.xVelocity = utils.randomBetween(1, 3) * utils.randomSign();
+    this.yVelocity = utils.randomBetween(1, 3) * utils.randomSign();
+    this.color = 'rgb(200, 200, 200)';
   }
 
   Particle.prototype.touchingTop = function() {
@@ -42,16 +41,14 @@
   }
 
   Particle.prototype.ageBy = function(time) {
-    var distance = this.velocity * time * 0.06;
-
     // Inverse Y direction if touching top or bottom.
     if (this.touchingTop() || this.touchingBottom()) {
-      this.yDir = this.yDir * -1;
+      this.yVelocity = this.yVelocity * -1;
     }
 
     // Inverse X direction if touching left or right.
     if (this.touchingLeft() || this.touchingRight()) {
-      this.xDir = this.xDir * -1;
+      this.xVelocity = this.xVelocity * -1;
     }
 
     // Push to edge if touching.
@@ -74,9 +71,9 @@
       this.position.x = window.innerWidth - this.radius;
     }
 
-    this.position.x += Math.round(distance * this.xDir);
-    this.position.y += Math.round(distance * this.yDir);
+    this.position.x += this.xVelocity * 0.0625 * time;
+    this.position.y += this.yVelocity * 0.0625 * time;
   };
-  
+
   module.exports = Particle;
 })();
