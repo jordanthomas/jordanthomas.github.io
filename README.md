@@ -1,4 +1,4 @@
 jordanthomas.github.io
 ======================
 
-<a href="http://jordanthoma.me">A website.</a>
+<a href="https://www.jordanthomas.me">A website.</a>
